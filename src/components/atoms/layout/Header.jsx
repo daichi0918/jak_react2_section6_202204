@@ -3,11 +3,20 @@ import styled from "styled-components";
 
 export const Header = () => {
   return (
-    <header>
-      <Link to="/">HOME</Link>
-      <Link to="/users">USERS</Link>
-    </header>
+    <SHeader>
+      <SLink to="/">HOME</SLink>
+      <SLink to="/users">USERS</SLink>
+    </SHeader>
   );
 };
 
-const SHeader = () 
+const SHeader = styled.header`
+  background-color: #11999e;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+`;
+
+const SLink = styled(Link)`
+  margin: 0 8px;
+`;
